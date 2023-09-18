@@ -1,12 +1,17 @@
+@import "mapas.less";
+
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768) and (max-width: 1023px)";
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif;
+    font-family: #fonts[mainFont];
 }
 
 body {
-    background-color: #f5f6fa;
+    background-color: #colors[mainBgColor];
 }
 
 li {
@@ -20,7 +25,7 @@ li {
 }
 
 header {
-    background-color: #182C61;
+    background-color: #colors[headerBgColor];
     position: sticky;
     top: 0;
     left: 0;
@@ -43,7 +48,7 @@ header .container {
 }
 
 .menu li a {
-    color: #fff;
+    color: #colors[textColor];
     text-decoration: none;
 }
 
@@ -67,8 +72,8 @@ section {
 
 .product-button {
     display: block;
-    background-color: #44bd32;
-    color: #fff;
+    background-color: #colors[btnBgColor];
+    color: #colors[textColor];
     text-align: center;
     padding: 8px 0;
     border-radius: 8px;
@@ -77,10 +82,10 @@ section {
 }
 
 .product-button:hover {
-    background-color: #4cd137;
+    background-color: #colors[btnHoverColor];
 }
 
-@media screen and (max-width: 1023px) {
+@media @breakpointTablet {
     .container {
         max-width: 80%;
     }
@@ -91,7 +96,7 @@ section {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media @breakpointMobile {
     .products {
         display: block;
     }
